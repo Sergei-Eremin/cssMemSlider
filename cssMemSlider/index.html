@@ -11,31 +11,39 @@
 
 <body>
     <div class="slider">
-        <div class="bullets">
-            <label class="bullet-wrap">
-                <input type="radio" checked name="slider">
-                <div class="dot"></div>
-            </label>
-            <label class="bullet-wrap">
-                <input type="radio" name="slider">
-                <div class="dot"></div>
-            </label>
-            <label class="bullet-wrap">
-                <input type="radio" name="slider">
-                <div class="dot"></div>
-            </label>
-            <label class="bullet-wrap">
-                <input type="radio" name="slider">
-                <div class="dot"></div>
-            </label>
-        </div>
+        <input type="radio" checked name="slider" id="slide1">
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
         <div class="slider__container">
             <div class="slider__track">
-                <div class="slide"><img src="" alt="memas"></div>
-                <div class="slide"><img src="" alt="memas"></div>
-                <div class="slide"><img src="" alt="memas"></div>
-                <div class="slide"><img src="" alt="memas"></div>
+                <div class="slide">1
+                    <img src="" alt="memas">
+                </div>
+                <div class="slide">2
+                    <img src="" alt="memas">
+                </div>
+                <div class="slide">3
+                    <img src="" alt="memas">
+                </div>
+                <div class="slide">4
+                    <img src="" alt="memas">
+                </div>
             </div>
+        </div>
+        <div class="bullets">
+            <label class="bullet-wrap" for="slide1">
+                <div class="dot"></div>
+            </label>
+            <label class="bullet-wrap" for="slide2">
+                <div class="dot"></div>
+            </label>
+            <label class="bullet-wrap" for="slide3">
+                <div class="dot"></div>
+            </label>
+            <label class="bullet-wrap" for="slide4">
+                <div class="dot"></div>
+            </label>
         </div>
     </div>
 </body>

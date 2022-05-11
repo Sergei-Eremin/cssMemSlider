@@ -1,3 +1,4 @@
+/* common style */
 *{
     margin: 0;
     padding: 0;
@@ -9,11 +10,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+input[type=radio]{
+    display: none;
+}
+body{
+    background-color: bisque;
+}
 
+/* slider */
 .slider{
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .slider__container{
     overflow: hidden;
@@ -27,14 +37,18 @@
 .slider__track{
     transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
     width: 400%;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+.slider__track .slide{
+    width: 25%;
 }
 
+/* bullets */
 .bullets{
     display: flex;
     align-items: flex-start;
-}
-.bullet-wrap input{
-    display: none;
 }
 .bullet-wrap{
     padding: 15px;
