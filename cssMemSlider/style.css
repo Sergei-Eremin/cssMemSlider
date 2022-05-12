@@ -1,38 +1,42 @@
 /* common style */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 *::before,
-*::after{
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     font-size: 14px;
 }
-body{
+
+body {
     background-color: bisque;
     display: flex;
     height: 100vh;
 }
-input[type=radio]{
+
+input[type=radio] {
     display: none;
 }
 
 img,
 svg {
-  max-width: 100%;
-  width: 100%;
-  max-height: 100%;
-  display: block;
-  object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 /* slider */
-.slider{
+.slider {
     margin: auto;
     width: 80%;
     display: flex;
@@ -40,38 +44,42 @@ svg {
     align-items: center;
     justify-content: center;
 }
-.slider__container{
+
+.slider__container {
     overflow: hidden;
     width: 100%;
     height: 600px;
-    /* margin: auto; */
     border: 1px solid grey;
     padding: 10px;
     border-radius: 10px;
 }
-.slider__track{
-    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+.slider__track {
+    transition: margin-left 400ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
     width: 400%;
     display: flex;
     flex-wrap: nowrap;
-    height: 100%;
+    height: 80%;
 }
-.slider__track .slide{
+
+.slider__track .slide {
     width: 25%;
 }
 
 /* bullets */
-.bullets{
+.bullets {
     display: flex;
     align-items: flex-start;
 }
-.bullet-wrap{
-    padding: 25px;
+
+.bullet-wrap {
+    padding: 15px;
     position: relative;
     display: flex;
     cursor: pointer;
 }
-.bullet-wrap .dot{
+
+.bullet-wrap .dot {
     transition: .3s;
     width: 20px;
     height: 20px;
@@ -80,37 +88,69 @@ svg {
     border: 3px solid darkblue;
     display: flex;
 }
-.bullet-wrap:hover .dot{
+
+.bullet-wrap:hover .dot {
     background-color: aqua;
     border-color: cornflowerblue;
 }
 
-#slide1:checked ~ .bullets label:nth-child(1) .dot,
-#slide2:checked ~ .bullets label:nth-child(2) .dot,
-#slide3:checked ~ .bullets label:nth-child(3) .dot,
-#slide4:checked ~ .bullets label:nth-child(4) .dot{
+#slide1:checked~ .slider__container .bullets label:nth-child(1) .dot,
+#slide2:checked~ .slider__container .bullets label:nth-child(2) .dot,
+#slide3:checked~ .slider__container .bullets label:nth-child(3) .dot,
+#slide4:checked~ .slider__container .bullets label:nth-child(4) .dot {
     background-color: red;
     transition: .3s;
 }
 
-#slide1:checked:hover ~ .bullets label:nth-child(1) .dot,
-#slide2:checked:hover ~ .bullets label:nth-child(2) .dot,
-#slide3:checked:hover ~ .bullets label:nth-child(3) .dot,
-#slide4:checked:hover ~ .bullets label:nth-child(4) .dot{
+#slide1:checked:hover~  .slider__container .bullets label:nth-child(1) .dot,
+#slide2:checked:hover~  .slider__container .bullets label:nth-child(2) .dot,
+#slide3:checked:hover~  .slider__container .bullets label:nth-child(3) .dot,
+#slide4:checked:hover~  .slider__container .bullets label:nth-child(4) .dot {
     background-color: transparent;
     transition: .3s;
 }
 
 /* slide switching */
-#slide1:checked ~ .slider__container .slider__track {
+#slide1:checked~.slider__container .slider__track {
     margin-left: 0;
- }
- #slide2:checked ~ .slider__container .slider__track {
+}
+
+#slide2:checked~.slider__container .slider__track {
     margin-left: -100%;
- }
- #slide3:checked ~ .slider__container .slider__track {
+}
+
+#slide3:checked~.slider__container .slider__track {
     margin-left: -200%;
- }
- #slide4:checked ~ .slider__container .slider__track {
+}
+
+#slide4:checked~.slider__container .slider__track {
     margin-left: -300%;
- }
+}
+
+/* text */
+
+.text {
+    margin-top: 30px;
+    color: red;
+    min-height: 20px;
+}
+
+.text__slide1,
+.text__slide2,
+.text__slide3,
+.text__slide4 {
+    line-height: 0;
+    opacity: 0;
+    z-index: 3;
+}
+
+/* text switching */
+
+#slide1:checked ~  .slider__container .text div:nth-child(1),
+#slide2:checked ~  .slider__container .text div:nth-child(2),
+#slide3:checked ~  .slider__container .text div:nth-child(3),
+#slide4:checked ~  .slider__container .text div:nth-child(4) {
+  line-height: 1;
+  opacity: 1;
+  transition: .4s;
+}
