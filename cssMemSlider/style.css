@@ -78,7 +78,15 @@ body{
     transition: .3s;
 }
 
+#slide1:checked:hover ~ .bullets label:nth-child(1) .dot,
+#slide2:checked:hover ~ .bullets label:nth-child(2) .dot,
+#slide3:checked:hover ~ .bullets label:nth-child(3) .dot,
+#slide4:checked:hover ~ .bullets label:nth-child(4) .dot{
+    background-color: darkgoldenrod;
+    transition: .3s;
+}
 
+/* slide switching */
 #slide1:checked ~ .slider__container .slider__track {
     margin-left: 0;
  }
