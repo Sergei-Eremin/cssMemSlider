@@ -32,13 +32,14 @@ svg {
     width: 100%;
     max-height: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* slider */
 .slider {
     margin: auto;
-    width: 80%;
+    max-width: 900px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,9 +49,7 @@ svg {
 .slider__container {
     overflow: hidden;
     width: 100%;
-    height: 600px;
     border: 1px solid grey;
-    padding: 10px;
     border-radius: 10px;
 }
 
@@ -59,16 +58,26 @@ svg {
     width: 400%;
     display: flex;
     flex-wrap: nowrap;
-    height: 80%;
+    height: 400px;
 }
 
 .slider__track .slide {
     width: 25%;
+    margin: 10px;
+}
+
+/* row */
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
 }
 
 /* bullets */
 .bullets {
-    display: flex;
+    display: inline-flex;
     align-items: flex-start;
 }
 
@@ -130,15 +139,17 @@ svg {
 /* text */
 
 .text {
-    margin-top: 30px;
-    color: red;
+    font-size: 20px;
+    color: black;
     min-height: 20px;
+    display: inline-block;
 }
 
 .text__slide1,
 .text__slide2,
 .text__slide3,
 .text__slide4 {
+    /* height: 0; */
     line-height: 0;
     opacity: 0;
     z-index: 3;
