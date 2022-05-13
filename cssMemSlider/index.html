@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,52 @@
     <link rel="stylesheet" href="style.css">
     <title>cssMemSlider</title>
 </head>
+
 <body>
-    
+    <div class="slider">
+        <input type="radio" checked name="slider" id="slide1">
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <div class="slider__container">
+            <div class="slider__track">
+                <div class="slide">
+                    <img src="life.jpg" alt="memas">
+                </div>
+                <div class="slide">
+                    <img src="compiler.jpg" alt="memas">
+                </div>
+                <div class="slide">
+                    <img src="error.png" alt="memas">
+                </div>
+                <div class="slide">
+                    <img src="pizza.png" alt="memas">
+                </div>
+            </div>
+            <div class="row">
+                <div class="text">
+                    <div class="text__slide1">Жиза</div>
+                    <div class="text__slide2">compiler</div>
+                    <div class="text__slide3">error</div>
+                    <div class="text__slide4">pizza</div>
+                </div>
+                <div class="bullets">
+                    <label class="bullet-wrap" for="slide1">
+                        <div class="dot"></div>
+                    </label>
+                    <label class="bullet-wrap" for="slide2">
+                        <div class="dot"></div>
+                    </label>
+                    <label class="bullet-wrap" for="slide3">
+                        <div class="dot"></div>
+                    </label>
+                    <label class="bullet-wrap" for="slide4">
+                        <div class="dot"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
