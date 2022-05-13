@@ -38,7 +38,7 @@ svg {
 /* slider */
 .slider {
     margin: auto;
-    max-width: 900px;
+    max-width: 64.2857rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -49,8 +49,8 @@ svg {
 .slider__container {
     overflow: hidden;
     width: 100%;
-    border: 1px solid grey;
-    border-radius: 10px;
+    border: 0.0625rem solid grey;
+    border-radius: 0.625rem;
 }
 
 .slider__track {
@@ -58,12 +58,12 @@ svg {
     width: 400%;
     display: flex;
     flex-wrap: nowrap;
-    height: 400px;
+    height: 25rem;
 }
 
 .slider__track .slide {
     width: 25%;
-    margin: 10px;
+    margin: 0.625rem;
 }
 
 /* row */
@@ -72,7 +72,7 @@ svg {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 0.625rem;
 }
 
 /* bullets */
@@ -82,7 +82,7 @@ svg {
 }
 
 .bullet-wrap {
-    padding: 15px;
+    padding: 0.9375rem;
     position: relative;
     display: flex;
     cursor: pointer;
@@ -90,11 +90,11 @@ svg {
 
 .bullet-wrap .dot {
     transition: .3s;
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     border-radius: 50%;
     background-color: darkcyan;
-    border: 3px solid darkblue;
+    border: 0.1875rem solid darkblue;
     display: flex;
 }
 
@@ -139,9 +139,9 @@ svg {
 /* text */
 
 .text {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: black;
-    min-height: 20px;
+    min-height: 1.25rem;
     display: inline-block;
 }
 
@@ -164,4 +164,27 @@ svg {
   line-height: 1;
   opacity: 1;
   transition: .4s;
+}
+
+/* media */
+
+@media (max-width: 999px){
+    .slider{
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 767px){
+    body{
+        padding: 0 0.625rem;
+    }
+    .row{
+        flex-wrap: wrap;
+        margin-bottom: 0.625rem;
+    }
+    .row .bullets{
+        width: 100%;
+        order: -1;
+        justify-content: center;
+    }
 }
